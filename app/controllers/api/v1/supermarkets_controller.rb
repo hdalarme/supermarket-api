@@ -2,6 +2,7 @@ class Api::V1::SupermarketsController < ApplicationController
   before_action :set_supermarket, only: [:show, :update, :destroy]
   #before_action :require_authorization!, only: [:show, :update, :destroy]
   skip_before_action :verify_authenticity_token
+
   # GET /api/v1/supermarkets
   def index
     #@supermarkets = current_user.supermarkets

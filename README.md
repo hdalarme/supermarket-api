@@ -14,7 +14,7 @@ _Faça sua lista de compras e deixe o app mostra onde a compra fica mais barato.
 
 ## Depencencias
 
-gem rack-cors
+gem [rack-cors](https://rubygems.org/gems/rack-cors/versions/0.4.0?locale=pt-BR) 
 gem rack-attack
 gem devise
 gem simple_token_authentication
