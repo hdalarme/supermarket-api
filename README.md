@@ -12,6 +12,13 @@ _Faça sua lista de compras e deixe o app mostra onde a compra fica mais barato.
 
 ## Sobre o Supermarket
 
+## Depencencias
+
+gem rack-cors
+gem rack-attack
+gem devise
+gem simple_token_authentication
+
 ## Comunicação
 
 ## Como contribuir
