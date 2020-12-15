@@ -1,7 +1,8 @@
-class Api::V1::ProductsController < ApplicationController
+class Api::V1::ProductsController < Api::V1::ApiController
+  #skip_before_action :verify_authenticity_token
   before_action :set_product, only: [:show, :update, :destroy]
   #before_action :require_authorization!, only: [:show, :update, :destroy]
-  skip_before_action :verify_authenticity_token
+  
 
   # GET /api/v1/products
   def index

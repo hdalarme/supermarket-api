@@ -11,4 +11,5 @@ class User < ApplicationRecord
          #:lockable
 
   has_many :lists, dependent: :destroy
+  has_many :items
 end
