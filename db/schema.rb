@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_15_200745) do
+ActiveRecord::Schema.define(version: 2020_12_16_172351) do
 
   create_table "items", force: :cascade do |t|
     t.integer "list_id", null: false
@@ -30,6 +30,19 @@ ActiveRecord::Schema.define(version: 2020_12_15_200745) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_lists_on_user_id"
+  end
+
+  create_table "prices", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "product_id", null: false
+    t.integer "supermarket_id", null: false
+    t.decimal "valor", precision: 7, scale: 2
+    t.decimal "valorPromocional", precision: 7, scale: 2
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_prices_on_product_id"
+    t.index ["supermarket_id"], name: "index_prices_on_supermarket_id"
+    t.index ["user_id"], name: "index_prices_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -69,4 +82,7 @@ ActiveRecord::Schema.define(version: 2020_12_15_200745) do
   add_foreign_key "items", "products"
   add_foreign_key "items", "users"
   add_foreign_key "lists", "users"
+  add_foreign_key "prices", "products"
+  add_foreign_key "prices", "supermarkets"
+  add_foreign_key "prices", "users"
 end

@@ -12,4 +12,5 @@ class User < ApplicationRecord
 
   has_many :lists, dependent: :destroy
   has_many :items
+  has_many :prices
 end
