@@ -2,7 +2,9 @@
 
 _Faça sua lista de compras e deixe o app mostra onde a compra fica mais barato._
 
-[Veja a aplicação web](#)
+[Veja a aplicação funcionando](#)  
+  
+[Veja a aplicação web](https://github.com/hdalarme/supermarket-web)
 
 ## Conteúdo
 
@@ -14,7 +16,7 @@ _Faça sua lista de compras e deixe o app mostra onde a compra fica mais barato.
 
 ## Sobre o Supermarket
 
-em breve
+O projeto Supermarket é um aplicativo para cadastro de lista de comprar que informa o local com o menor é mais vantajoso fazer suas comprar.
 
 ## Dependencias
 
@@ -30,7 +32,7 @@ O projeto esta em desenvolvimento qualquer duvida pode me contatar via e-mail co
 
 ## Como contribuir
 
-em breve
+Você pode baixar o aplicativo fazer suas listas de compras e informar o preço dos itens em um determinado estabelecimento, assim o aplicativo pode fazer as análises dos preços e informar onde os produtos estão mais baratos.
 
 ## FAQ
 
