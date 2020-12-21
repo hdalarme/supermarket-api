@@ -1,7 +1,7 @@
 class Api::V1::RegistrationsController < Devise::RegistrationsController #Api::V1::ApiController
     before_action :ensure_params_exist, only: :create
     #skip_before_filter :verify_authenticity_token, :only => :create
-    #skip_before_action :verify_authenticity_token, :only => :create
+    skip_before_action :verify_authenticity_token, :only => :create
     #protect_from_forgery with: :null_session
 
     # sign up
@@ -23,9 +23,11 @@ class Api::V1::RegistrationsController < Devise::RegistrationsController #Api::V
         end
     end
 
+puts :user
+
     private
     def user_params
-      params.require(:user).permit(:email, :password, :password_confirmation)
+      params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
 
     def ensure_params_exist
