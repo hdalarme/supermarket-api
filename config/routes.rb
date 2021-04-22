@@ -7,7 +7,10 @@ Rails.application.routes.draw do
         post "sign_up", to: "registrations#create"
         post "sign_in", to: "sessions#create"
       end
+      resources :supermarkets
+      resources :products
       resources :lists
+      
     end
   end
 end
